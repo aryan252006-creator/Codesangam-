@@ -64,7 +64,7 @@ const works = [
 const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("searchInput");
 
-// Function to render gallery cards
+
 function renderGallery(filteredWorks) {
   gallery.innerHTML = "";
   filteredWorks.forEach((work) => {
@@ -83,25 +83,25 @@ function renderGallery(filteredWorks) {
 
   lucide.createIcons();
 
-  // ⭐ Make bookmark buttons interactive
+
   const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
   bookmarkButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Toggle active class for color change
+   
       btn.classList.toggle("active");
 
-      // Optional: Change icon color directly for extra effect
+   
       const icon = btn.querySelector("svg");
       if (btn.classList.contains("active")) {
-        icon.style.fill = "gold";       // filled gold star
+        icon.style.fill = "gold";       
         icon.style.color = "gold";
-        btn.style.background = "#4b0082"; // darker purple
+        btn.style.background = "#4b0082"; 
         btn.textContent = " Bookmarked";
         btn.prepend(icon);
       } else {
-        icon.style.fill = "none";       // hollow star
+        icon.style.fill = "none";      
         icon.style.color = "white";
-        btn.style.background = "#6a0dad"; // back to normal
+        btn.style.background = "#6a0dad"; 
         btn.textContent = " Bookmark";
         btn.prepend(icon);
       }
@@ -111,7 +111,7 @@ function renderGallery(filteredWorks) {
 
 renderGallery(works);
 
-// 🔍 Search Filter
+
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
   const filtered = works.filter(
@@ -120,4 +120,5 @@ searchInput.addEventListener("input", (e) => {
       w.type.toLowerCase().includes(query)
   );
   renderGallery(filtered);
+
 });
