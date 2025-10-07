@@ -13,21 +13,21 @@ body {
   line-height: 1.6;
 }
 
-/* Header Styling */
+
 .header {
   position: relative;
   text-align: center;
   padding: 50px 20px 30px;
-  background: #168b8d; /* dark background for professional tone */
+  background: #168b8d; 
   color: white;
 }
 
-/* Login button placed top-right */
+
 .login-btn {
   position: absolute;
   top: 20px;
   right: 30px;
-  background: #ea1e1ebd; /* black button */
+  background: #ea1e1ebd; 
   color: #fff;
   border: 1.5px solid #444;
   padding: 8px 18px;
@@ -37,9 +37,9 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
+
 .login-btn:hover {
-  background: #222; /* slightly lighter black on hover */
+  background: #222;
   border-color: #666;
   transform: scale(1.05);
 }
@@ -268,3 +268,4 @@ body {
     height: 200px;
   }
 }
+
